@@ -2,7 +2,7 @@ use static_alloc::Bump;
 
 // panics for heap < 64kb
 #[global_allocator]
-static A: Bump<[u8; 1 << 16]> = Bump::uninit(); // 8kB heap
+static A: Bump<[u8; 1 << 13]> = Bump::uninit(); // 8kB heap
 
 #[test]
 fn test_alloc_small() {
